@@ -1,0 +1,24 @@
+var dropdowns = document.getElementsByTagName('select');
+var dropdownNamesToChange = [
+  "agent_choose_ingroups",
+  "agent_choose_blended",
+  "scheduled_callbacks",
+  "agentonly_callbacks",
+  "agentcall_manual",
+  "closer_default_blended"
+];
+for (var i = 0; i < dropdowns.length; i++) {
+    if (dropdownNamesToChange.includes(dropdowns[i].name)) {
+        var options = dropdowns[i].getElementsByTagName('option');
+        var hasOption1 = false;
+        for (var j = 0; j < options.length; j++) {
+            if (options[j].value === '1') {
+                hasOption1 = true;
+                break;
+            }
+        }
+        if (hasOption1) {
+            dropdowns[i].value = '1';
+        }
+    }
+}
