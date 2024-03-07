@@ -1,0 +1,79 @@
+var dropdowns = document.getElementsByTagName('select');
+var dropdownNamesToChange = [
+    "view_reports",
+    "alter_agent_interface_options",
+    "modify_users",
+    "change_agent_campaign",
+    "delete_users",
+    "modify_usergroups",
+    "delete_user_groups",
+    "modify_lists",
+    "view_reports",
+    "alter_agent_interface_options",
+    "modify_users",
+    "change_agent_campaign",
+    "delete_users",
+    "modify_usergroups",
+    "delete_user_groups",
+    "modify_lists",
+    "delete_lists",
+    "load_leads",
+    "modify_leads",
+    "download_lists",
+    "export_reports",
+    "delete_from_dnc",
+    "modify_campaigns",
+    "delete_campaigns",
+    "campaign_detail",
+    "delete_campaigns",
+    "modify_ingroups",
+    "delete_ingroups",
+    "modify_inbound_dids",
+    "delete_inbound_dids",
+    "modify_custom_dialplans",
+    "modify_remoteagents",
+    "delete_remote_agents",
+    "modify_scripts",
+    "delete_scripts",
+    "modify_filters",
+    "delete_filters",
+    "ast_admin_access",
+    "ast_delete_phones",
+    "modify_call_times",
+    "delete_call_times",
+    "modify_servers",
+    "modify_shifts",
+    "modify_phones",
+    "modify_carriers",
+    "modify_labels",
+    "modify_colors",
+    "modify_languages",
+    "modify_statuses",
+    "modify_voicemail",
+    "modify_audiostore",
+    "modify_moh",
+    "modify_tts",
+    "modify_contacts",
+    "callcard_admin",
+    "add_timeclock_log",
+    "modify_timeclock_log",
+    "delete_timeclock_log",
+    "manager_shift_enforcement_override",
+    "pause_code_approval",
+    "vdc_agent_api_access"
+];
+for (var i = 0; i < dropdowns.length; i++) {
+    if (dropdownNamesToChange.includes(dropdowns[i].name)) {
+        var options = dropdowns[i].getElementsByTagName('option');
+        var hasOption1 = false;
+        for (var j = 0; j < options.length; j++) {
+            if (options[j].value === '1') {
+                hasOption1 = true;
+                break;
+            }
+        }
+        if (hasOption1) {
+            dropdowns[i].value = '1';
+        }
+    }
+}
