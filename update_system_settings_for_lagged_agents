@@ -1,10 +1,4 @@
 var selectElement = document.querySelector('select[name="agent_hidden_sound_seconds"]');
-    
-    // Change its value to 5
-    selectElement.value = '5';
-
-    // Get the submit button
-    var submitButton = document.querySelector('input[type="submit"]');
-
-    // Trigger a click event on the submit button
-    submitButton.click();
+selectElement.value = '5';
+var submitButton = document.querySelector('input[type="submit"]');
+submitButton.click();
